@@ -1,5 +1,4 @@
-# tradingview-forex-4-ma-lines
-The base lines for forex trading in Pine Script
+# The base lines for forex trading in Pine Script
 
 ```
 //@version=4
