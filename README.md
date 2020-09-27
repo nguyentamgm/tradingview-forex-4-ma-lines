@@ -1,6 +1,6 @@
 # The base lines for forex trading in Pine Script
 
-![Forex base lines screenshot](https://www.tradingview.com/x/J5qmfCpp/)
+![Forex base lines screenshot](https://www.tradingview.com/x/9gT0BGfp/)
 
 ```javascript
 //@version=4
