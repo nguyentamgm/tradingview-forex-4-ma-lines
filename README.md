@@ -1,6 +1,6 @@
 # The base lines for forex trading in Pine Script
 
-```
+```javascript
 //@version=4
 study("Forex base lines", overlay=true)
 
