@@ -5,7 +5,7 @@ Tradingview only allows 3 indicators for free users. So I made this one for myse
 
 ```javascript
 //@version=4
-study("Forex base lines", overlay=true)
+study("4 moving average lines", overlay=true)
 
 bb_length = input(title="BB Length", type=input.integer, defval=20, minval=1, maxval=100)
 bb_mult = input(title="BB Mult", type=input.float, defval=2, minval=0.01, maxval=20)
