@@ -5,7 +5,7 @@ Tradingview only allows 3 indicators for free users. So I made this one for myse
 
 ```javascript
 //@version=4
-study("4 moving average lines", overlay=true)
+study("The 4 Moving Averages", overlay=true)
 
 bb_length = input(title="BB Length", type=input.integer, defval=20, minval=1, maxval=100)
 bb_mult = input(title="BB Mult", type=input.float, defval=2, minval=0.01, maxval=20)
@@ -45,7 +45,7 @@ if (ema_fast_val > ema_slow_val and ema_slow_val > sma_xslow_val)
             weak = open - low
 
             // Bullish pinbar or bullish engulfing
-            if (weak > 2 * (body + nose)) or (close > open[1])
+            if (weak > 2 * (body + nose)) or (close > open[1] and nose < body * 0.33)
                 label.new(bar_index, low, color=color.green, text="TR", style=label.style_labelup, size=size.tiny)
         
 if (ema_fast_val < ema_slow_val and ema_slow_val <= sma_xslow_val)
@@ -58,7 +58,7 @@ if (ema_fast_val < ema_slow_val and ema_slow_val <= sma_xslow_val)
             weak = high - open
 
             // Bearish pinbar or bearish engulfing
-            if (weak > 2 * (body + nose)) or (close < open[1])
+            if (weak > 2 * (body + nose)) or (close < open[1] and nose < body * 0.33) 
                 label.new(bar_index, high, color=color.red, text="TR", style=label.style_labeldown, size=size.tiny)
 
 // Pinbar arrows
