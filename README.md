@@ -45,7 +45,7 @@ if (ema_fast_val > ema_slow_val and ema_slow_val > sma_xslow_val)
             weak = open - low
 
             // Bullish pinbar or bullish engulfing
-            if (nose < body and weak > 2 * body) or (close > open[1])
+            if (weak > 2 * (body + nose)) or (close > open[1])
                 label.new(bar_index, low, color=color.green, text="TR", style=label.style_labelup, size=size.tiny)
         
 if (ema_fast_val < ema_slow_val and ema_slow_val <= sma_xslow_val)
@@ -58,11 +58,8 @@ if (ema_fast_val < ema_slow_val and ema_slow_val <= sma_xslow_val)
             weak = high - open
 
             // Bearish pinbar or bearish engulfing
-            if (nose < body and weak > 2 * body) or (close < open[1])
+            if (weak > 2 * (body + nose)) or (close < open[1])
                 label.new(bar_index, high, color=color.red, text="TR", style=label.style_labeldown, size=size.tiny)
-
-// Fill BB ranges
-// fill(p_upper, p_lower, color=bb_middle > ema_fast_val ? #008B8B : #8B0000)
 
 // Pinbar arrows
 weak_top = high - max(open, close)
