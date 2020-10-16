@@ -1,4 +1,5 @@
-# The base lines for forex trading in Pine Script
+# The base lines for trend analysis in Pine Script
+Tradingview only allows 3 indicators for free users. So I made this one for myself to add 4 moving average lines into the chart and it is still counted as 1 indicator only, means I can add 2 more ;)
 
 ![Forex base lines screenshot](https://www.tradingview.com/x/9gT0BGfp/)
 
